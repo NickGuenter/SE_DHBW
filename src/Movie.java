@@ -15,6 +15,7 @@ public class Movie {
     public int getPriceCode() {
         return this.price.getPriceCode();
     }
+
     public void setPriceCode(int priceCode) {
         switch (priceCode) {
             case REGULAR:
@@ -30,7 +31,8 @@ public class Movie {
                 throw new IllegalArgumentException("Incorrect Price Code");
         }
     }
-    public String getTitle (){
+
+    public String getTitle() {
         return title;
     }
 
@@ -39,9 +41,6 @@ public class Movie {
     }
 
     int getFrequentRenterPoints(int days) {
-        if (this.getPriceCode() == Movie.NEW_RELEASE && days > 1)
-            return 2;
-        else
-            return 1;
+        return this.price.getFrequentRenterPoints(days);
     }
 }

@@ -10,4 +10,10 @@ class NewReleasePrice extends Price {
         return Movie.NEW_RELEASE;
     }
 
+    @Override
+    int getFrequentRenterPoints(int days) {
+        if (days > 1) return 2;
+        return super.getFrequentRenterPoints(days);
+    }
+
 }
