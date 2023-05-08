@@ -1,4 +1,4 @@
-class ChildrensPrice extends Price {
+class ChildrenPrice extends Price {
     @Override
     public double getCharge(int days) {
         double result = 2;
@@ -9,6 +9,6 @@ class ChildrensPrice extends Price {
 
     @Override
     public int getPriceCode() {
-        return Movie.CHILDRENS;
+        return Movie.CHILDREN;
     }
 }
